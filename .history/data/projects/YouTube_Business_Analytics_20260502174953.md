@@ -78,7 +78,7 @@ Week-over-week % drop
 - These tables are optimized for analytics and are consumed by the Streamlit dashboard for fast querying.
 
 ## Design Choices
-1. The design choice enables multiple snapshots per day, such that only 1 is considered for downstream analysis.
+1. The design choice enables multiple snapshots per day, such that only 1 is considered for downstream analysis
 2. The ingestion pipeline needs to run daily at least once to capture new data or else the analysis would be chopped.
 3. DBT transformation can be done only when the first data needs to be visualised. Though we run it after each ingestion.
 
