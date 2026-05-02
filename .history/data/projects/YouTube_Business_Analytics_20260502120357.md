@@ -61,22 +61,3 @@ Week-over-week % drop
 - A wider architecture was conceived, though the implementation contained 70% of the system imagined. Today's system can be migrated to a more robust implementation if stakeholders or users increase. 
 
 ![Architecture](../../logistics/youtube_analytics.png)
-
-## Data Pipeline (ETL)
-### 🔹 Extraction
-- Python scripts call the YouTube Data API to fetch all channel videos and their latest statistics (views, likes, comments, metadata).
-- Each run captures a snapshot of these metrics and loads them into BigQuery as raw JSON, building a historical record over time.
-
-### 🔹 Transformation
-- DBT was used for the transformations
-- dbt transforms raw YouTube snapshots into clean, structured tables (stg_videos) by extracting fields, typing data, and deduplicating records.
-- It then builds analytics models (fct_video_growth, fct_channel_weekly) to compute time-based metrics like daily growth and weekly performance for decision-making.
-
-### 🔹 Loading
-- dbt writes the transformed models directly into Google BigQuery as partitioned, query-ready tables (e.g., fct_video_growth, fct_channel_weekly).
-- These tables are optimized for analytics and are consumed by the Streamlit dashboard for fast querying.
-
-## Conclusion
-The project shifted our focus from individual videos to the channel as a growing library. Instead of chasing virality, we now track weekly performance and the contribution of older videos to understand if we are building long-term assets. Metrics like Evergreen Score and decay help identify which bhajans sustain versus fade.
-
-The system creates a simple weekly feedback loop—what worked and what to do next. This better fits devotional content, where consistency matters more than spikes. It provides a lightweight, cost-free way to guide content decisions and library growth.

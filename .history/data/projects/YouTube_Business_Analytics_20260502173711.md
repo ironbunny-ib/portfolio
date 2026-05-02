@@ -75,8 +75,3 @@ Week-over-week % drop
 ### 🔹 Loading
 - dbt writes the transformed models directly into Google BigQuery as partitioned, query-ready tables (e.g., fct_video_growth, fct_channel_weekly).
 - These tables are optimized for analytics and are consumed by the Streamlit dashboard for fast querying.
-
-## Conclusion
-The project shifted our focus from individual videos to the channel as a growing library. Instead of chasing virality, we now track weekly performance and the contribution of older videos to understand if we are building long-term assets. Metrics like Evergreen Score and decay help identify which bhajans sustain versus fade.
-
-The system creates a simple weekly feedback loop—what worked and what to do next. This better fits devotional content, where consistency matters more than spikes. It provides a lightweight, cost-free way to guide content decisions and library growth.

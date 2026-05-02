@@ -79,4 +79,4 @@ Week-over-week % drop
 ## Conclusion
 The project shifted our focus from individual videos to the channel as a growing library. Instead of chasing virality, we now track weekly performance and the contribution of older videos to understand if we are building long-term assets. Metrics like Evergreen Score and decay help identify which bhajans sustain versus fade.
 
-The system creates a simple weekly feedback loop—what worked and what to do next. This better fits devotional content, where consistency matters more than spikes. It provides a lightweight, cost-free way to guide content decisions and library growth.
+The system creates a simple weekly feedback loop—what worked and what to do next. This better fits devotional content, where consistency matters more than spikes, and provides a lightweight, cost-free way to guide content decisions and library growth.
