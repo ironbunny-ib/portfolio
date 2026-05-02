@@ -57,7 +57,5 @@ Week-over-week % drop
 
 ## Choice of Technology Stack
 - I chose the Technology Stack such that it had a resemblance to real world production systems but was still simple enough to be run without much cloud costs. Due to this our entire project is running at no cost under free tier limits.
-- I also wanted to view the dashboard on any device, so we chose streamlit cloud. A docker container was created to store our scripts and dbt code, which is set to run 4 times a day through Github Actions. Once data is loaded, we query it through Streamlit using SQL.
-- A wider architecture was conceived, though the implementation contained 70% of the system imagined. Today's system can be migrated to a more robust implementation if stakeholders or users increase. 
-
-![Architecture](../../logistics/youtube_analytics.png)
+- I also wanted to view the dashboard on any device, so we chose streamlit cloud. A docker container was created to store our scripts and dbt code, which is set to run 4 times a day through Github Actions.
+### 
